@@ -1,0 +1,31 @@
+.conversation {
+    display: flex;
+    align-items: center;
+    padding: 1vw;
+}
+.conversation:hover {
+    background-color: grey;
+    cursor: pointer;
+}
+.conversationImg{
+    height: 8vh;
+    width: 4vw;
+    background-color: white;
+    color: white;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1vw;
+}
+.conversationName{
+    font-weight: 500;
+}
+.onlineMark {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    color: greenyellow;
+}
+
+.onlineMark.not {
+    color: grey;
+}

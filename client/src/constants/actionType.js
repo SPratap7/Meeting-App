@@ -1,0 +1,9 @@
+export const FETCH_ALL = 'FETCH_ALL';
+export const CREATE = 'CREATE';
+export const FILTER_BY_VALUE = 'FILTER_BY_VALUE';
+export const FILTER_BY_DATE = 'FILTER_BY_DATE';
+export const UPDATE = 'UPDATE';
+export const DELETE = 'DELETE';
+export const AUTH = 'AUTH';
+export const LOGOUT = 'LOGOUT';
+export const REMOVE_MEETING = 'REMOVE_MEETING';

@@ -1,0 +1,12 @@
+.addConversationHeader{
+    color: black;
+    height: 70vh;
+    width: 40vw;
+}
+.emailIdField{
+    width: 32vw;
+}
+.roomName {
+    height: 10vh;
+    width: 30vw;
+}
