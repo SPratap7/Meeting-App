@@ -83,7 +83,7 @@ function Auth({isLogin}) {
     })
     return (
         <Container component="main" maxWidth="xs">
-            <Paper elevation={2}>
+            <Paper elevation={2} style={{marginTop: '15vh', width: '30vw'}}>
                 <Avatar >
                     <LockedOutlinedIcon />
                 </Avatar>
