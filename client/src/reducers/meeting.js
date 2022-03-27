@@ -35,7 +35,7 @@ const meetingReducer = (state = initialMeetingState, action) => {
 
                 value = value.toLowerCase();
                 let filteredValues = state.meetings.filter(meetings => {
-                    return meetings.name.toLowerCase().includes(value) || meetings.id.toLowerCase().includes(value);
+                    return meetings.title.toLowerCase().includes(value);
                 });
                 appliedFilters = addFilterIfNotExists('FILTER_BY_VALUE', appliedFilters);
                 newState.filteredMeetings = filteredValues;
