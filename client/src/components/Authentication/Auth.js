@@ -83,12 +83,8 @@ function Auth({isLogin}) {
     })
     return (
         <Container component="main" maxWidth="xs">
-            <Paper elevation={2} style={{marginTop: '15vh', width: '30vw'}}>
-                <Avatar >
-                    <LockedOutlinedIcon />
-                </Avatar>
-                <Typography>{isSignUp ? 'Sign Up' : 'Log In'}</Typography>
-                
+            <Paper elevation={2} style={{marginTop: '10vh', width: '30vw', padding: '1vw'}}>
+                <Typography style={{fontSize: '2.5vw', fontFamily: 'Patrick Hand', margin:'1vw'}}>{isSignUp ? 'Sign Up' : 'Log In'}</Typography>
                 <form onSubmit={handleSubmit}>
                     <Grid container spacing={2}>
                         { isSignUp && (
@@ -101,13 +97,13 @@ function Auth({isLogin}) {
                         <AuthInput name="password" label="Password" handleChange={handleChange}  type={showPassword ? "text" : "password"} handleShowPassword={handleShowPassword}/>
                         { isSignUp && (<AuthInput name="confirmPassword" label="Confirm Password" handleChange={handleChange} type="password"/>)}
                     </Grid>
-                    <Button type="submit" fullWidth variant ="contained" color="primary">
+                    <Button type="submit" fullWidth variant ="contained" color="primary" style={{marginTop:'1vw', backgroundColor: '#1F4068'}}>
                         {isSignUp ? 'SignUp' : 'LogIn'}
                     </Button>
                     <GoogleLogin
                         clientId="744463204381-e08u1f2hcko4k885ceqf2j36khd7iine.apps.googleusercontent.com"
                         render={(renderProps) => (
-                            <Button color='primary' fullWidth onClick={renderProps.onClick} disabled={renderProps.disabled} startIcon={<GoogleIcon/>} variant="contained">
+                            <Button color='primary' fullWidth onClick={renderProps.onClick} disabled={renderProps.disabled} startIcon={<GoogleIcon/>} variant="contained" style={{marginTop:'1vw', backgroundColor: '#1F4068'}}>
                                 Google Log In
                             </Button>
                         )}
@@ -116,7 +112,7 @@ function Auth({isLogin}) {
                         cookiePolicy="single_host_origin"
                     />
                     <Grid item>
-                        <Button onClick={switchMode}>
+                        <Button onClick={switchMode} style={{marginTop:'1vw'}}>
                             {isSignUp ? "Already have an account? Log In" : "Don't have an account? Sign Up"}
                         </Button>
                     </Grid>

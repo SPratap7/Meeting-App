@@ -20,6 +20,11 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
   },
+  clickAction: {
+    '&:hover': {
+      cursor: 'pointer',
+    }
+  }
 }));
 
 export default function EditMeeting (props) {
@@ -36,7 +41,7 @@ export default function EditMeeting (props) {
 
   return (
     <div>
-      <EditIcon onClick={handleOpen}/>
+      <EditIcon onClick={handleOpen} className={classes.clickAction}/>
       
       <Modal
         aria-labelledby="transition-modal-title"

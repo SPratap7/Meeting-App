@@ -15,6 +15,9 @@ const useStyles = makeStyles({
   list: {
     width: 250,
   },
+  iconColor: {
+    color: 'white',
+  }
 });
 
 export default function SwipeableTemporaryDrawer() {
@@ -37,35 +40,33 @@ export default function SwipeableTemporaryDrawer() {
   }
 
   const list = () => (
-    <Fragment>
-      <div>
-          MEETING APP
-      </div>
+    <div style={{backgroundImage: 'linear-gradient(to right top, #282630, #3c3a45, #524f5c, #696574, #807c8c)', height: '100%', color:'white'}}>
+      <div />
       <div className={classes.list} role="presentation" onClick={toggleDrawer(false)} onKeyDown={toggleDrawer(false)} >
         <List>
             <ListItem button onClick={() => gotoPage("")}>
-              <ListItemIcon><HomeIcon /></ListItemIcon>
+              <ListItemIcon><HomeIcon className={classes.iconColor}/></ListItemIcon>
               <ListItemText primary="Home" />
             </ListItem>
             <ListItem button onClick={() => gotoPage("meeting")}>
-              <ListItemIcon><MeetingRoomIcon /></ListItemIcon>
+              <ListItemIcon><MeetingRoomIcon className={classes.iconColor}/></ListItemIcon>
               <ListItemText primary="My Meetings" />
             </ListItem>
             <ListItem button onClick={() => gotoPage("chat")}>
-              <ListItemIcon><ForumIcon /></ListItemIcon>
+              <ListItemIcon><ForumIcon className={classes.iconColor}/></ListItemIcon>
               <ListItemText primary="Chat" />
             </ListItem>
             <ListItem button onClick={() => gotoPage("videochat")}>
-              <ListItemIcon><VideocamIcon /></ListItemIcon>
+              <ListItemIcon><VideocamIcon className={classes.iconColor}/></ListItemIcon>
               <ListItemText primary="Video Chat" />
             </ListItem>
             <ListItem button onClick={() => gotoPage("aboutme")}>
-              <ListItemIcon><InfoIcon /></ListItemIcon>
+              <ListItemIcon><InfoIcon className={classes.iconColor}/></ListItemIcon>
               <ListItemText primary="About Me" />
             </ListItem>
         </List>
       </div>
-    </Fragment>
+    </div>
   );
 
   return (
@@ -73,7 +74,7 @@ export default function SwipeableTemporaryDrawer() {
       <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="open drawer" onClick={toggleDrawer(true)}>
         <MenuIcon/>
       </IconButton>
-      <SwipeableDrawer anchor='left' open={drawerState} onClose={toggleDrawer(false)} onOpen={toggleDrawer(true)}>
+      <SwipeableDrawer anchor='left' open={drawerState} onClose={toggleDrawer(false)} onOpen={toggleDrawer(true)} >
         {list()}
       </SwipeableDrawer>
     </Fragment>
