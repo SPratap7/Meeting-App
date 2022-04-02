@@ -25,6 +25,7 @@ const useStyles = makeStyles((theme) => ({
       [theme.breakpoints.up('sm')]: {
         display: 'block',
       },
+      fontFamily: 'BIZ UDGothic, sans-serif',
     },
     search: {
       position: 'relative',
@@ -168,11 +169,11 @@ function Navbar() {
 
     return (
         <div>
-            <AppBar position="static">
+            <AppBar position="static" style={{backgroundImage: 'linear-gradient(to left bottom, #000000, #201c1e, #383237, #514a54, #686473)'}}>
                 <Toolbar>
                     <SidebarDrawer />
                     <Typography className={classes.title} variant="h6" noWrap>
-                        Meeting App
+                      Tachyon
                     </Typography>
                     <div className={classes.search}>
                         <div className={classes.searchIcon}>
@@ -186,7 +187,7 @@ function Navbar() {
                         (renderLoggedinBar) :
                         (<>
                             <Link to="/login" style={{ textDecoration: 'none' }}>
-                                <Button variant="contained" color="secondary" > Login </Button>
+                                <Button variant="contained" color="secondary"  style={{marginRight: '1.5vw'}}> Login </Button>
                             </Link>
                             <Link to="/signup" style={{ textDecoration: 'none' }}>
                                 <Button variant="contained" color="secondary" > SignUp </Button>

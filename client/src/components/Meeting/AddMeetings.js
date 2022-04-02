@@ -20,6 +20,12 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
   },
+  clickAction: {
+    '&:hover': {
+      cursor: 'pointer',
+    }
+  }
+
 }));
 
 export default function AddMeetings() {
@@ -36,7 +42,7 @@ export default function AddMeetings() {
 
   return (
     <div>
-      <AddCircleIcon fontSize='large' onClick={handleOpen}/>
+      <AddCircleIcon fontSize='large' onClick={handleOpen} className={classes.clickAction}/>
       
       <Modal
         aria-labelledby="transition-modal-title"
