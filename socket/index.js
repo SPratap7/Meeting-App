@@ -1,11 +1,11 @@
 import { Server } from 'socket.io';
-import dotenv from 'dotenv';
+//import dotenv from 'dotenv';
 import {addChatUser,removeChatUser,getChatUser} from './chatUsers.js';
 import {addVideoUser,removeVideoUser,getVideoUser} from './videoUsers.js';
 
 const PORT = process.env.PORT || 5100;
 const PORT2 = process.env.PORT2 || 5200;
-dotenv.config();
+//dotenv.config();
 
 const io = new Server(PORT, {
     cors: {

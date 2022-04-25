@@ -3,10 +3,10 @@
     display: flex;
 }
 .chatMenu {
-    flex: 3;
+    flex: 2;
 }
 .chatBox {
-    flex: 7;
+    flex: 8;
 }
 .chatBoxWrapper {
     display: flex;
@@ -30,8 +30,10 @@
     border-radius: calc(0.5vh + 0.5vw);
     cursor: pointer;
 }
+.chatMenuWrapper {
+    border-right: 0.3vw solid #0F0E0E;
+}
 .chatMenuWrapper, .chatBoxWrapper{
     padding: 10px;
-    background-color: rgb(18, 18, 85);
     height:100%;
 }

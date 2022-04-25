@@ -33,7 +33,7 @@ const ContextProvider = ({children}) => {
         socket.on("CallEnded", () => {
             console.log(me);
             setCallEnded(true);
-            connectionRef.current.destroy();
+            connectionRef?.current.destroy();
             // window.location.reload();
         });
     },[]);

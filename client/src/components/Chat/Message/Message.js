@@ -10,10 +10,10 @@ function Message({own, text, createdAt, user}) {
         <div className={own ? "message own": "message"}>
             <div className="messageTop">
                 <MaskBoy className="messageImg"/>
-                <p className="messageText">{user?.name}</p>
+                {/*<p className="messageText">{user?.name}</p>*/}
                 <p className="messageText">{text}</p>
             </div>
-            <div className="messageBottom">{createdAt}</div>
+            {/*<div className="messageBottom">{createdAt}</div>*/}
         </div>
     )
 }
