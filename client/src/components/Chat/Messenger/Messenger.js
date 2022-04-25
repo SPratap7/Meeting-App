@@ -25,30 +25,6 @@ const useStyles = makeStyles((theme) => ({
         display: 'block',
       },
     },
-    search: {
-      position: 'relative',
-      borderRadius: theme.shape.borderRadius,
-      backgroundColor: fade(theme.palette.common.white, 0.15),
-      '&:hover': {
-        backgroundColor: fade(theme.palette.common.white, 0.25),
-      },
-      marginRight: theme.spacing(2),
-      marginLeft: 0,
-      width: '100%',
-      [theme.breakpoints.up('sm')]: {
-        marginLeft: theme.spacing(3),
-        width: 'auto',
-      },
-    },
-    searchIcon: {
-      padding: theme.spacing(0, 2),
-      height: '100%',
-      position: 'absolute',
-      pointerEvents: 'none',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-    },
     inputRoot: {
       color: 'inherit',
     },
@@ -168,14 +144,8 @@ function Messenger() {
         <div className="messenger">
             <div className="chatMenu">
                 <div className="chatMenuWrapper">
-                    <div className={classes.search}>
-                        <div className={classes.searchIcon}>
-                            <SearchIcon />
-                        </div>
-                        <InputBase placeholder="Search…" classes={{ root: classes.inputRoot, input: classes.inputInput }} inputProps={{ 'aria-label': 'search' }} />
-                    </div>
                     { conversations ? conversations.map( c =>(
-                      <div onClick={() => handleConversationChange(c)}>
+                      <div onClick={() => handleConversationChange(c)} style={{backgroundColor: '#32535d'}}>
                         <Conversation conversation={c}/>
                       </div>
                     )) : <></>}
@@ -191,6 +161,7 @@ function Messenger() {
                         { message.map( m =>(
                           <div ref={scrollRef}>
                             <Message own={ m?.senderId == user?.result?._id } text={m?.text} createdAt={m?.createdAt} user={members[m?.senderId]}/>
+                            <br/>
                           </div>
                         ))}
                       </div>

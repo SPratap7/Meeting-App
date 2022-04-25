@@ -1,5 +1,6 @@
 import React,{useState, useEffect} from 'react';
 import {ReactComponent as MaskBoy} from '../../../images/maskboy.svg';
+import {ReactComponent as Room} from '../../../images/room.svg';
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 import { useDispatch } from 'react-redux';
 import { getUsers } from '../../../actions/user';
@@ -25,7 +26,9 @@ function Conversation({online, conversation}) {
 
     return (
         <div className="conversation">
-            <MaskBoy className="conversationImg"/>
+            {conversation?.roomName ?
+                <Room className="conversationImg"/> : <MaskBoy className="conversationImg"/>
+            }
             <span className="conversationName">{userName?.length ? conversation?.roomName ? conversation?.roomName : userName : ""}</span>
             <FiberManualRecordIcon className={online ? "onlineMark": "onlineMark not"}/>
         </div>

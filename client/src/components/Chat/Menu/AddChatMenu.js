@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
   addChatMenu: {
     position: 'absolute',
     bottom: '4vh',
-    left:'27vw',
+    left:'16vw',
     cursor: 'pointer',
   },
   modal: {

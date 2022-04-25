@@ -4,6 +4,7 @@
 }
 .messageTop{
     display: flex;
+    margin-top:'10px';
 }
 .messageImg{
     display: flex;
